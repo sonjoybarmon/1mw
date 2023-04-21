@@ -10,8 +10,8 @@ import {
 import Link from "next/link";
 
 import Logo from "lib/components/Logo";
-import SearchInput from "lib/components/SearchInput";
 
+import SearchInput from "lib/components/SearchInput";
 import MobileSideDrawer from "./MobileSideDrawer";
 import Toolbar from "./Toolbar";
 
@@ -77,6 +77,7 @@ const Header = () => {
                       "20px": "10px",
                     }}
                     as="div"
+                    style={{ display: "block", width: "120px" }}
                   >
                     {link.name}
                   </CLink>
