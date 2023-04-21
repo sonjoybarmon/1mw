@@ -51,7 +51,7 @@ const SearchInput = () => {
   // };
 
   return (
-    <Flex w="full" flexDir={{ base: "column", sm: "row" }}>
+    <Flex style={{ width: "460px" }} flexDir={{ base: "column", sm: "row" }}>
       <Flex w="full" justifyContent="center" alignItems="center">
         <form
           className="searchinput"
@@ -67,7 +67,7 @@ const SearchInput = () => {
               borderRadius="none"
               size="md"
               fontSize="14px"
-              placeholder="Enter Address, City, ZIP, MLS#"
+              placeholder="Search By: Address, City, ZIP, MLS#"
             />
             <InputRightElement cursor="pointer" onClick={onClick}>
               <HiSearch size="1.4rem" />

@@ -38,14 +38,27 @@ const Header = () => {
 
   return (
     <>
-      <Flex as="nav" pos="sticky" top="0" zIndex="sticky" bg="white">
-        <Box pl="3" pr="3" py="4">
+      <Flex
+        as="nav"
+        pos="sticky"
+        top="0"
+        zIndex="sticky"
+        bg="white"
+        style={{ width: "100%" }}
+      >
+        <Box
+          pl="3"
+          pr="3"
+          py="4"
+          // style={{ width: "100%" }}
+        >
           {/* <Container maxW="container.xl" pl="3" pr="3" py="4"> */}
           <Flex
             gap="6"
-            justifyContent="center"
+            // justifyContent="space-between"
             // alignItems="center"
             flexDir={{ base: "column", lg: "row" }}
+            // style={{ width: "100%" }}
           >
             <Toolbar onToggle={onToggle} />
             <HStack flex="18" display={{ base: "none", md: "flex" }}>
@@ -70,9 +83,11 @@ const Header = () => {
                 </Link>
               ))}
             </HStack>
-            <HStack flex="5" style={{ marginLeft: "150px" }}>
+            {/* <HStack> */}
+            <HStack flex="5" style={{ marginLeft: "120px" }}>
               <SearchInput />
             </HStack>
+            {/* <Box style={{ display: "block" }}></Box> */}
             <Spacer flex="1" display={{ base: "none", xl: "block" }} />
           </Flex>
         </Box>
