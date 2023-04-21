@@ -15,7 +15,7 @@ const Logo: FC<ILogoProps> = ({ size = "sm" }) => {
     <Link href="/">
       <HStack mr="4">
         <Image
-          src="/images/home/Logo_New.png"
+          src="/Mike Wilen Logo.png"
           alt="mike wilen logo"
           width={sideValue + 150}
           height={sideValue}

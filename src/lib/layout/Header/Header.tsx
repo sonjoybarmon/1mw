@@ -5,7 +5,7 @@ import {
   HStack,
   Spacer,
   // eslint-disable-next-line prettier/prettier
-  useDisclosure
+  useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
 
@@ -23,8 +23,8 @@ const Header = () => {
       path: "tel:+16124009000",
     },
     {
-      name: "INFO@1MW.COM",
-      path: "mailto:info@1mw.com",
+      name: "1@1MW.COM",
+      path: "mailto:1@1MW.COM",
     },
     {
       name: "ABOUT",
