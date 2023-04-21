@@ -19,17 +19,23 @@ const Header = () => {
   const { isOpen, onClose, onToggle } = useDisclosure();
   const navLinks = [
     {
-      name: "612-400-9000",
-      path: "tel:+16124009000",
+      name: "SELL",
+      path: "/sell",
     },
+    {
+      name: "BUY",
+      path: "/buy",
+    },
+
     {
       name: "1@1MW.COM",
       path: "mailto:1@1MW.COM",
     },
     {
-      name: "ABOUT",
-      path: "/about",
+      name: "612-400-9000",
+      path: "tel:+16124009000",
     },
+
     // {
     //   name: "ABOUT",
     //   path: "/about",
@@ -63,7 +69,63 @@ const Header = () => {
             <Toolbar onToggle={onToggle} />
             <HStack flex="18" display={{ base: "none", md: "flex" }}>
               <Logo />
-              {navLinks.map((link) => (
+              <Link href="/sell" className="linkcssheader">
+                <CLink
+                  fontSize={{
+                    base: "20px",
+                    md: "sm",
+                    xl: "20px",
+                    "20px": "10px",
+                  }}
+                  as="div"
+                  style={{ display: "inline-block" }}
+                >
+                  SELL
+                </CLink>
+              </Link>
+              <Link href="/buy" className="linkcssheader">
+                <CLink
+                  fontSize={{
+                    base: "20px",
+                    md: "sm",
+                    xl: "20px",
+                    "20px": "10px",
+                  }}
+                  as="div"
+                  style={{ display: "inline-block" }}
+                >
+                  BUY
+                </CLink>
+              </Link>
+              <Link href="mailto:1@1MW.COM" className="linkcssheader">
+                <CLink
+                  fontSize={{
+                    base: "20px",
+                    md: "sm",
+                    xl: "20px",
+                    "20px": "10px",
+                  }}
+                  as="div"
+                  style={{ display: "inline-block" }}
+                >
+                  1@1MW.COM
+                </CLink>
+              </Link>
+              <Link href="tel:+16124009000" className="linkcssheader">
+                <CLink
+                  fontSize={{
+                    base: "20px",
+                    md: "sm",
+                    xl: "20px",
+                    "20px": "10px",
+                  }}
+                  as="div"
+                  style={{ display: "inline-block", width: "120px" }}
+                >
+                  612-400-9000
+                </CLink>
+              </Link>
+              {/* {navLinks.map((link) => (
                 <Link
                   href={link.path}
                   key={link.name}
@@ -77,12 +139,12 @@ const Header = () => {
                       "20px": "10px",
                     }}
                     as="div"
-                    style={{ display: "block", width: "120px" }}
+                    style={{ display: "inline-block" }}
                   >
                     {link.name}
                   </CLink>
                 </Link>
-              ))}
+              ))} */}
             </HStack>
             {/* <HStack> */}
             <HStack flex="5" style={{ marginLeft: "120px" }}>
