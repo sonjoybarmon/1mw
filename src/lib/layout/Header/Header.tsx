@@ -1,6 +1,6 @@
 import {
+  Box,
   Link as CLink,
-  Container,
   Flex,
   HStack,
   Spacer,
@@ -39,7 +39,8 @@ const Header = () => {
   return (
     <>
       <Flex as="nav" pos="sticky" top="0" zIndex="sticky" bg="white">
-        <Container maxW="container.xl" pl="3" pr="3" py="4">
+        <Box pl="3" pr="3" py="4">
+          {/* <Container maxW="container.xl" pl="3" pr="3" py="4"> */}
           <Flex
             gap="6"
             justifyContent="center"
@@ -69,12 +70,12 @@ const Header = () => {
                 </Link>
               ))}
             </HStack>
-            <HStack flex="5">
+            <HStack flex="5" style={{ marginLeft: "150px" }}>
               <SearchInput />
             </HStack>
             <Spacer flex="1" display={{ base: "none", xl: "block" }} />
           </Flex>
-        </Container>
+        </Box>
       </Flex>
       <MobileSideDrawer
         {...{
